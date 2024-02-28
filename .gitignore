@@ -3,3 +3,9 @@ document.fls
 document.fdb_latexmk
 document.log
 document.synctex.gz
+*.aux
+*.fls
+*.db_latexmk
+*.log
+*.synctex.gz
+*.fdb_latexmk
