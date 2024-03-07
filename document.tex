@@ -1,5 +1,5 @@
 \documentclass[12pt]{article}
-
+\usepackage{csquotes}
 \usepackage{amsmath,amsfonts,amssymb}
 \usepackage{geometry}
 \usepackage{pifont}
@@ -7,11 +7,15 @@
 \usepackage[english]{babel}
 \usepackage{ragged2e}
 \usepackage{blindtext}
-\usepackage{biblatex}
+\usepackage[backend=biber, style=numeric]{biblatex}
 \usepackage[hyperindex,breaklinks,colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
 
 \addbibresource{references.bib}
-
+\addbibresource{references/DolevReference.bib}
+\addbibresource{references/ShirelReference.bib}
+\addbibresource{references/HadasReference.bib}
+\addbibresource{references/RoyReference.bib}
+\addbibresource{references/MoriaReference.bib}
 
 \geometry{a4paper, margin=1in}
 
@@ -76,8 +80,7 @@
 \section{Results}
 // in the mean time we don't fill this
 
-\section{References}
-
+\newpage
 \printbibliography
 
 \end{document}
