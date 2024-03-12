@@ -1,3 +1,16 @@
 
 
 ~\cite{kwan2019algebraic}
+The article introduces inverse theorems showing that if a quadratic polynomial exhibits significant concentration on single values, it must be close to a low-rank quadratic form. This is achieved through a detailed analysis involving the arrangement of coefficients and the algebraic structure of the polynomial.\\\newline
+\textbf{Background:}\\
+Quadratic Polynomial Concentration: Consider a quadratic polynomial in ${n}$ independent random variables ${\xi_1, \xi_2,...,\xi_n}$ where\\${Pr(\xi_i=1)=Pr(\xi_i=-1)=0.5}$:
+$${f(\xi)=\sum_{i,j=1}^{n} a_{ij} \xi_i \xi_j + \sum_{i=1}^{n} b_i \xi_i + c}$$
+where ${a_{ij},b_i}$ and ${c}$ are coefficients, and the polynomial is said to exhibit significant concentration if for some value ${x}$, the probability ${Pr(\xi=x)}$ exceeds a certain threshold, indicating that ${f(\xi)}$ is closely concentrated around ${x}$.\\\newline
+Inverse Theorem Statement: If ${f(\xi)}$ demonstrates this high concentration behavior, there exists a quadratic form ${h(\xi)}$ of low rank ${r < n}$ such that
+$${h(\xi) = \sum_{i,j=1}^{n} a'_{ij} \xi_i \xi_j
+}$$
+where the sum of the absolute differences between the coefficients of ${f(\xi)}$ and ${h(\xi)}$ is small, suggesting ${f(\xi)}$ is close to ${h(\xi)}$ in structural form.
+\\\newline
+The novel algebraic insight is that the polynomial ${f(\xi)}$, under conditions of significant concentration, can be approximated by ${h(\xi)}$, a low-rank quadratic form. This challenges previous conjectures about the structure necessary for such concentration and refines our understanding of the quadratic Littlewood–Offord problem.\\\newline
+The application to Ramsey Graphs is by extending the analysis to the edge counts in Ramsey graphs, represented as quadratic polynomials of the graph's adjacency matrix entries, the article addresses questions of anti-concentration in these graphs. If ${G}$ is a Ramsey graph with adjacency matrix 
+${A}$, then the edge count in a randomly chosen subset of vertices can be viewed through the lens of quadratic polynomials, offering insights into the graph's inherent randomness and structure, similar to that of random graphs.\\\newline
