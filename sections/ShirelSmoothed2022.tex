@@ -1,14 +1,38 @@
 
 ~\cite{jain2020smoothed}
-The researchers have provided a comprehensive analysis that generalizes the bounds on the probability of a matrix being near-singular after random perturbation. Specifically, they have shown that for a matrix ${A}$ perturbed by a random matrix 
-${M}$ with i.i.d. sub-Gaussian entries, the smallest singular value of ${A+M}$ remains unlikely to be negligible. This result is significant as it relaxes the stringent requirements previously believed necessary, suggesting a broader class of matrices maintains stability under perturbations.\\\newline
-Background:\\
-${s_n}$ refers to the smallest singular value of a matrix. In the context of linear algebra, the singular values of a matrix ${A}$ are the square roots of the eigenvalues of the matrix ${A^T A}$ (or equivalently, ${A A^T}$, where ${A^T}$ is the transpose of ${A}$. The singular values are always non-negative and are often denoted in non-increasing order as ${s_1 \geq s_2 \geq ... \geq s_n}$
-for an ${n x n}$ matrix. Analyzing ${s_n(A+M)}$ helps understand the effects of adding random noise (through ${M}$) to a deterministic matrix (${A}$) on its singular value spectrum, particularly focusing on the smallest singular value. This analysis is crucial for assessing the stability and invertibility of the matrix ${A+M}$ , with smaller values of ${s_n(A+M)}$ indicating that the matrix is closer to being singular (or non-invertible), while larger values suggest that the matrix is well-conditioned and far from singular\\
-The smallest singular value is a measure of how close a matrix is to being singular (non-invertible). A smaller value of ${s_n}$ indicates that the matrix is closer to having a determinant of zero, which means it's closer to being singular. Conversely, a larger ${s_n}$ suggests that the matrix is well-conditioned and far from singular.\\\newline
-Extension of Rudelson and Vershynin's Result:\\
-The first contribution shows that the probability ${P[s_n(A+M) \leq \epsilon]}$ is ${O(\epsilon \sqrt{n} + 2e^{- \Omega (n))}}$ (where ${s_n}$ refers to the smallest singular value of a matrix), under the condition that ${A}$ has ${\Omega (n)}$ singular values which are ${O(\sqrt{n})}$. This result extends a known finding by Rudelson and Vershynin, which applied under a more restrictive condition requiring all singular values of ${A}$ to be ${O(\sqrt{n})}$. Essentially, it means that if ${A}$ has sufficiently many (but not necessarily all) singular values within a certain range, the smallest singular value of ${A+M}$ will be very small with a probability that grows linearly with ${\epsilon}$ and exponentially decreases with ${n}$. This is significant because it allows for a broader class of matrices ${A}$ to be considered while still ensuring that ${A+M}$ is unlikely to be near-singular.\\\newline
-Refinement of Bound on Smallest Singular Value Probability:\\
-The second contribution addresses bounds on the probability that the smallest singular value is very small, specifically less than ${n^{-C_3}}$, in terms of the norms of ${A}$ and parameters ${C_1}$ and ${C_2}$. It states that for such bounds to hold, ${C_3}$ must be at least on the order of ${C_1 \sqrt{C_2}}$. This is a refinement and a complement to a result by Tao and Vu, who established a bound with ${C_3=O(C_1 C_2 + C_1 + 1)}$, and it challenges their speculation that ${C_3}$ could be ${O(C_1 + C_2)}$. In simpler terms, this contribution provides a more precise relationship between the size of the smallest singular value's probability bound and the scaling parameters, showing that the decay rate of this probability (as ${n}$ increases) is fundamentally linked to the growth rates of the matrix norm and the parameters ${C_1}$ and ${C_2}$.\\\newline
-A novel theoretical contribution of this work is the establishment of sharp lower bounds on the smallest singular value for matrices subjected to discrete noise perturbations. This finding contradicts the speculation by renowned mathematicians Terence Tao and Van Vu, demonstrating that the influence of certain parameters on the smallest singular value is inherently limited. This insight not only deepens our theoretical understanding but also has practical ramifications in the design and analysis of algorithms.\\\newline
-The study's approach combines geometric analysis with probabilistic methods, a technique that has allowed the authors to navigate the complex landscape of high-dimensional matrices and their perturbations. By innovatively applying these methods, the authors have been able to uncover patterns and bounds that were previously obscured.
+
+In the context of numerical linear algebra and random matrix theory,
+the behavior of the smallest singular value of matrices under random
+perturbations has been a subject of extensive study due to its profound
+implications on matrix invertibility and stability of numerical algorithms.
+Recent advancements by Vishesh Jain, Ashwin Sah, and Mehtaab Sawhney have 
+shed new light on this topic, that extend and challenge previous
+understandings.
+
+The researchers have provided a comprehensive analysis that generalizes
+the bounds on the probability of a matrix being near-singular after
+random perturbation. Specifically, they have shown that for a matrix
+${A}$ perturbed by a random matrix 
+${M}$ with i.i.d. sub-Gaussian entries, the smallest singular value
+of ${A+M}$ remains unlikely to be negligible. This result is significant
+as it relaxes the stringent requirements previously believed necessary,
+suggesting a broader class of matrices maintains stability under
+perturbations.
+
+A novel theoretical contribution of this work is the establishment 
+of sharp lower bounds on the smallest singular value for matrices
+subjected to discrete noise perturbations. This finding contradicts
+the speculation by renowned mathematicians Terence Tao and Van Vu,
+demonstrating that the influence of certain parameters on the smallest
+singular value is inherently limited. This insight not only deepens our
+theoretical understanding but also has practical ramifications in 
+the design and analysis of algorithms.
+
+The study's approach combines geometric
+analysis with probabilistic methods, a technique
+that has allowed the authors to navigate the complex landscape
+of high-dimensional matrices and their perturbations.
+By innovatively applying these methods, 
+the authors have been able to uncover patterns and bounds
+that were previously obscured.
+
