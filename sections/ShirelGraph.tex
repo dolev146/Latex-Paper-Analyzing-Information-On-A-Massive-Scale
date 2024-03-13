@@ -1,20 +1,155 @@
 
 
-~\cite{kwan2019algebraic}
+
 \textbf{Background:}\\
-- Quadratic Polynomial Concentration: Consider a quadratic polynomial in ${n}$ independent Rademacher random variables ${\xi_1, \xi_2,...,\xi_n}$ meaning ${Pr(\xi_i=1)=Pr(\xi_i=-1)=0.5}$ for each ${i}$:
+- Quadratic Polynomial Concentration: Consider a quadratic polynomial
+in ${n}$ independent Rademacher random variables 
+${\xi_1, \xi_2,...,\xi_n}$ meaning ${Pr(\xi_i=1)=Pr(\xi_i=-1)=0.5}$ 
+for each ${i}$:
 $${f(\xi)=\sum_{i,j=1}^{n} a_{ij} \xi_i \xi_j + \sum_{i=1}^{n} b_i \xi_i + c}$$
-where ${a_{ij},b_i}$ and ${c}$ are coefficients, and the polynomial is said to exhibit significant concentration if for some value ${x}$, the probability ${Pr(\xi=x)}$ exceeds a certain threshold, indicating that ${f(\xi)}$ is closely concentrated around ${x}$.\\\newline
+where ${a_{ij},b_i}$ and ${c}$ are coefficients,
+and the polynomial is said to exhibit significant 
+concentration if for some value ${x}$, the probability
+${Pr(\xi=x)}$ exceeds a certain threshold, indicating 
+that ${f(\xi)}$ is closely concentrated around ${x}$.
+
 - Point Probability: Can be represented as ${P(f(\xi_1, \xi_2,...,\xi_n) = k)}$ where ${k}$ is a specific value.\\\newline
-- A Ramsey graph is a concept from graph theory that is closely related to Ramsey's theorem, one of the central results in combinatorial mathematics. The theorem addresses the conditions under which a graph must contain a certain structure. Specifically, Ramsey's theorem states that for any given integers ${r}$ and ${s}$, there exists a least integer ${N=R(r,s)}$ such that any graph on ${N}$ or more vertices, no matter how its edges are colored using two colors (say, red and blue), will contain either a red clique of size ${r}$ or a blue clique of size ${s}$. A clique here refers to a subset of vertices such that every two distinct vertices are connected by an edge.\\\newline
-The article introduces inverse theorems of a similar flavour to Costello’s conjecture, showing that if a quadratic polynomial exhibits point probabilities significantly larger than ${1/n}$, it must be close to a low-rank quadratic form. This is achieved through a detailed analysis involving the arrangement of coefficients and the algebraic structure of the polynomial.\\\newline
-The authors in the given paper focused on the quadratic Littlewood-Offord problem by examining the concentration of quadratic polynomials in independent Bernoulli random variables. They extended classical questions about linear polynomials to the quadratic case, exploring the conditions under which a quadratic polynomial can have significant point probabilities. Their main results, as summarized in Theorems 1.1 and 1.2, establish a remarkable connection between the anti-concentration of a quadratic polynomial $f(\xi)$ and the algebraic structure of $f$. Specifically, they demonstrated that if a quadratic polynomial has a concentration probability significantly larger than $\frac{1}{n}$, it must be close to a quadratic form with low rank.\\\newline
-In \textbf{Theorem 1.1}, for any given $r \geq 3$ and $0 < \epsilon \leq 1$, they identified a constant $C = C(r, \epsilon)$ such that for a quadratic polynomial $f \in F[x_1, \dots, x_n]$ (where $F$ is either $\mathbb{C}$, $\mathbb{R}$, or $\mathbb{Q}$) with all coefficients of absolute value at most 1, and $\xi = (\xi_1, \dots, \xi_n) \in \text{Rad}^n$, if ${\sup_{x \in F} \Pr(f(\xi) = x) \geq C \cdot \frac{(\log n)^{r/2}}{n^{1-2/(r+2)}}}$,
-then there exists a quadratic form $h \in F[x_1, \dots, x_n]$ of rank strictly less than $r$ such that the sum of the absolute values of the coefficients of $f - h$ is at most $\epsilon n^2$. Theorem 1.1 provides a significant breakthrough in this area by demonstrating that if a quadratic polynomial shows point probabilities significantly larger than $1/n$, then it closely resembles a quadratic form of low rank. This finding is profound because it not only generalizes the Littlewood–Offord problem to quadratic polynomials but also introduces an "inverse" aspect to the problem\\\newline
-\textbf{Theorem 1.2} follows a similar line of reasoning but focuses on the scenario where the quadratic polynomial ${f}$'s degree-2 coefficients come from a specific set $S$. It states that under similar conditions of anti-concentration, there exists a quadratic form $h$ close to ${f}$, differing in at most $\epsilon n^2$ coefficients, and also has a rank strictly less than $r$. This theorem further advances the generalization of the Littlewood–Offord problem to quadratic polynomials, not just by considering the concentration probabilities of these polynomials on single values, but also by imposing an additional structural constraint on the coefficients.\\\newline
-These theorems can provide stronger anti-concentration estimates for certain complex quadratic polynomials, particularly those not easily factorizable over $\mathbb{C}$, as previously conjectured by Costello. It is noted that for complex quadratic forms with a rank of at most 2, which can be expressed as a sum of squares of linear forms, these invariably factorize into linear factors in $\mathbb{C}$. Thus, applying Theorems 1.1 and 1.2 with $r = 3$ suggests that if a polynomial $f(\xi)$'s point probabilities significantly exceed $n^{-3/5}$, it implies the existence of a closely related quadratic form $h$, which factorizes into linear factors over the complex numbers.\\\newline
-Beyond the theoretical advancements, this paper extends its findings to the study of Ramsey graphs, specifically addressing and providing asymptotic answers to questions previously posed by Kwan, Sudakov, and Tran.\\\newline
-\textbf{Theorem 1.3.} The following holds for any fixed constants $C, c > 0$. Let $G$ be an $n$-vertex $C$-Ramsey graph, and, for some $cn \leq k \leq (1 - c)n$, let $X$ be the number of edges induced by a uniformly random subset of $k$ vertices of $G$. Then for any $x \in \mathbb{Z}$, $we have \Pr(X = x) \leq n^{o(1)-1}$.\\ This theorem directly applies the insights gained from Theorems 1.1 and 1.2 to the context of Ramsey graphs, offering a novel perspective on edge statistics within these graphs. A C-Ramsey graph is defined as a graph that avoids large homogeneous subsets (i.e., large subsets of vertices that are either all connected or all disconnected), which is a central theme in Ramsey theory. The theorem investigates the anti-concentration of edge counts in such graphs by considering the number of edges ($X$) within a randomly selected subset of vertices.
-Specifically, for an $n$-vertex C-Ramsey graph and a subset of vertices of size between $cn$ and $(1-c)n$, Theorem 1.3 establishes that the probability of exactly $x$ edges being induced within this subset is bounded above by $n^{o(1)-1}$ for any integer $x$. This result implies a high level of anti-concentration of edge counts, indicating that in a C-Ramsey graph, the distribution of the number of edges in subsets of vertices does not significantly concentrate around any specific number. Such a behavior mirrors one of the properties expected in random graphs, where edge counts among subsets of vertices are distributed broadly without significant concentration.
-By linking the algebraic properties of quadratic polynomials to the structure of Ramsey graphs, Theorem 1.3 showcases how abstract algebraic concepts can have concrete applications in graph theory.\\\newline
-This application highlights the interplay between discrete mathematics and algebraic probability, demonstrating the practical relevance of algebraic characterizations of quadratic polynomials in understanding the structure and randomness inherent in Ramsey graphs. By analyzing the edge counts within Ramsey graphs through the framework of quadratic polynomials—using entries from the graphs' adjacency matrices—the study delves into the anti-concentration properties of these graphs. For a Ramsey graph $G$ with an adjacency matrix $A$, the investigation into the edge counts of randomly chosen vertex subsets reveals insights into the graph's structure, akin to the properties observed in random graphs. The researchers applied principles from the quadratic Littlewood–Offord problem to explore the distribution of edge counts in subsets of vertices within C-Ramsey graphs. They focused on determining whether, for a randomly selected subset of $n/2$ vertices in an $n$-vertex C-Ramsey graph, the probability that the induced subgraph contains exactly $x$ edges adheres to $O(1/n)$ for all $x$. Such a finding would suggest that the edge distribution in Ramsey graphs does not overly concentrate around any specific edge count, reflecting a characteristic commonly associated with random graphs.
+- Ramsey's theorem states that for any given integers ${r}$ and ${s}$,
+there exists a least integer ${N=R(r,s)}$ 
+such that any graph on ${N}$ or more vertices,
+no matter how its edges are colored using two colors
+(say, red and blue), will contain either a red clique of size ${r}$
+or a blue clique of size ${s}$.
+A clique here refers to a subset of vertices such that every two distinct
+vertices are connected by an edge.
+
+The article introduces inverse theorems of a similar flavour to Costello's
+conjecture, showing that if a quadratic polynomial exhibits point
+probabilities significantly larger than ${1/n}$,
+it must be close to a low-rank quadratic form.
+This is achieved through a detailed analysis
+involving the arrangement of coefficients
+and the algebraic structure of the polynomial.
+
+The authors in the given paper focused on the quadratic
+Littlewood-Offord problem by examining the concentration
+of quadratic polynomials in independent Bernoulli random
+variables. They extended classical questions about linear
+polynomials to the quadratic case, exploring the
+conditions under which a quadratic polynomial can have
+significant point probabilities. Their main results,
+as summarized in Theorems 1.1 and 1.2, establish a connection
+between the anti-concentration of a quadratic polynomial 
+$f(\xi)$ and the algebraic structure of $f$.
+In particular,
+they demonstrated that if a quadratic polynomial has a 
+concentration probability significantly
+larger than $\frac{1}{n}$, it must be close to
+a quadratic form with low rank.\\\newline
+
+In \textbf{Theorem 1.1}, for any given $r \geq 3$ and
+$0 < \epsilon \leq 1$, they identified a constant
+$C = C(r, \epsilon)$ such that for a quadratic polynomial
+$f \in F[x_1, \dots, x_n]$ (where $F$ is either 
+$\mathbb{C}$, $\mathbb{R}$, or $\mathbb{Q}$) with all coefficients
+of absolute value at most 1, and
+$\xi = (\xi_1, \dots, \xi_n) \in \text{Rad}^n$, if
+${\sup_{x \in F} \Pr(f(\xi) = x) \geq C \cdot \frac{(\log n)^{r/2}}{n^{1-2/(r+2)}}}$,
+then there exists a quadratic form
+$h \in F[x_1, \dots, x_n]$ of rank strictly less than $r$
+such that the sum of the absolute values of the coefficients
+of $f - h$ is at most $\epsilon n^2$.
+ 
+Theorem 1.1 provides a significant breakthrough in this 
+area by demonstrating that if a quadratic polynomial shows 
+point probabilities significantly larger than $1/n$, then
+it closely resembles a quadratic form of low rank.
+This finding is profound because it not only generalizes
+the Littlewood-Offord problem to quadratic polynomials
+but also introduces an "inverse" aspect to the problem\\\newline
+
+\textbf{Theorem 1.2} follows a similar line of reasoning but
+focuses on the scenario where the quadratic polynomial ${f}$'s 
+degree-2 coefficients come from a specific set $S$. 
+It states that under similar conditions of anti-concentration,
+there exists a quadratic form $h$ close to ${f}$,
+differing in at most $\epsilon n^2$ coefficients, 
+and also has a rank strictly less than $r$. 
+This theorem further advances the generalization of the 
+Littlewood–Offord problem to quadratic polynomials,
+not just by considering the concentration probabilities
+of these polynomials on single values, but also by imposing
+an additional structural constraint on the coefficients.\\\newline
+
+These theorems can provide stronger anti-concentration
+estimates for certain complex quadratic polynomials,
+particularly those not easily factorizable over $\mathbb{C}$,
+as previously conjectured by Costello.
+It is noted that for complex quadratic forms with a rank
+of at most 2, which can be expressed as a sum of squares 
+of linear forms, these invariably factorize into linear factors
+in $\mathbb{C}$.
+Thus, applying Theorems 1.1 and 1.2 with $r = 3$ suggests
+that if a polynomial $f(\xi)$'s point probabilities
+significantly exceed $n^{-3/5}$, it implies the existence 
+of a closely related quadratic form $h$, which factorizes
+into linear factors over the complex numbers.\\\newline
+
+Beyond the theoretical advancements, this paper extends
+its findings to the study of Ramsey graphs,
+specifically addressing and providing asymptotic 
+answers to questions previously posed by Kwan, Sudakov, and Tran.\\\newline
+
+\textbf{Theorem 1.3.} The following holds for any fixed constants
+$C, c > 0$. Let $G$ be an $n$-vertex $C$-Ramsey graph, and, 
+for some $cn \leq k \leq (1 - c)n$, let $X$ be the number of edges
+induced by a uniformly random subset of $k$ vertices of $G$.
+Then for any $x \in \mathbb{Z}$, $we have \Pr(X = x) \leq n^{o(1)-1}$.
+This theorem directly applies the insights gained from 
+Theorems 1.1 and 1.2 to the context of Ramsey graphs, 
+offering a novel perspective on edge statistics within these graphs.
+A C-Ramsey graph is defined as a graph that avoids large homogeneous
+subsets (i.e., large subsets of vertices that are either all
+connected or all disconnected), which is a central theme
+in Ramsey theory. The theorem investigates the anti-concentration of edge counts in such graphs by considering the number of edges ($X$) within a randomly selected subset of vertices.
+Specifically, for an $n$-vertex C-Ramsey graph and a subset
+of vertices of size between $cn$ and $(1-c)n$,
+Theorem 1.3 establishes that the probability of exactly $x$ edges
+being induced within this subset is bounded above by $n^{o(1)-1}$
+for any integer $x$. This result implies a high level of 
+anti-concentration of edge counts, indicating that in a C-Ramsey graph,
+the distribution of the number of edges in subsets of vertices
+does not significantly concentrate around any specific number.
+Such a behavior mirrors one of the properties expected in random
+graphs, where edge counts among subsets of vertices are distributed
+broadly without significant concentration.
+
+By linking the algebraic properties of quadratic polynomials
+to the structure of Ramsey graphs, Theorem 1.3 showcases how 
+abstract algebraic concepts can have concrete applications in graph theory.
+\\\newline
+
+This application highlights the interplay between discrete
+mathematics and algebraic probability, demonstrating the 
+practical relevance of algebraic characterizations of 
+quadratic polynomials in understanding the structure 
+and randomness inherent in Ramsey graphs. 
+By analyzing the edge counts within Ramsey graphs 
+through the framework of quadratic polynomials—using 
+entries from the graphs' adjacency matrices—the study 
+delves into the anti-concentration properties of these graphs.
+For a Ramsey graph $G$ with an adjacency matrix $A$, 
+the investigation into the edge counts of randomly chosen
+vertex subsets reveals insights into the graph's structure,
+making to the properties observed in random graphs.
+The researchers applied principles from the quadratic 
+Littlewood–Offord problem to explore the distribution 
+of edge counts in subsets of vertices within C-Ramsey graphs.
+They focused on determining whether, 
+for a randomly selected subset of $n/2$ vertices in an
+$n$-vertex C-Ramsey graph, the probability that the induced
+subgraph contains exactly $x$ edges adheres to $O(1/n)$ 
+for all $x$. Such a finding would suggest that the edge 
+distribution in Ramsey graphs does not overly concentrate 
+around any specific edge count, reflecting a characteristic
+commonly associated with random graphs.
