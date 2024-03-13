@@ -1,2 +1,144 @@
+\newpage
 
-~\cite{kwan2022anticoncentration}
+
+\section*{ANTICONCENTRATION IN RAMSEY GRAPHS AND A PROOF OF THE
+ERDŐS-MCKAY CONJECTURE}
+The paper `ANTICONCENTRATION IN RAMSEY GRAPHS AND A PROOF OF THE
+ERDŐS-MCKAY CONJECTURE`~\cite{kwan2022anticoncentration}
+
+by Matthew Kwan, Ashwin Sah, Lisa Saurmann, and Methaab Sawhney
+presents an examination of edge-statistics within C-Ramsey graphs,
+contributing insights that advance our understanding toward
+the resolution of the Littlewood-Offord problem. 
+By analyzing the distribution of edges in random vertex subsets of these graphs,
+we uncover new patterns that echo the fundamental tenets of the 
+Littlewood-Offord theory, marking a notable progression.
+
+Lets begin with a few basics. An induced subgraph of a graph is called homogeneous 
+if it is a clique or independent set (i.e., all possible edges are present, or none are).
+One of the most fundamental results in Ramsey theory,
+proved in 1935 by Erdős and Szekeres~\cite{erdos1935combinatorial}  states that every 
+n-vertex graph contains a homogeneous subgraph with
+at least $ \frac{1}{2} \log_2{n} $ vertices.On the other hand, Erdős~\cite{erdos1947some} famously used
+the probabilistic method to prove that, for all $n \geq 3$, there is an n-vertex graph
+with no homogeneous subgraph on $2 \log_2{n}$ vertices. an upper bound and lower bound.
+
+A C-Ramsey graph is an n-vertex graph without cliques or independent sets 
+larger than \(C \log_2 n\), where \(C\) is a constant.
+
+
+\subsection{\textbf{Theorem1}} Fix  $C > 0$  and $ \eta > 0$. Let  $G$  be a  C-Ramsey graph on  n  vertices,
+where  n  is sufficiently large relative to  $C$  and  $\eta$. Then, for any integer  $x$  with
+0 $\leq x \leq (1 - \eta)e(G)$,  there exists a subset  $U$ $\subseteq V(G)$  inducing exactly 
+$x$  edges.
+The theorem declares that for any large enough C-Ramsey
+graph and integer within a specified range, there exists a vertex
+subset inducing exactly that many edges.~\cite{alon2003induced}.
+
+
+\subsection{\textbf{Edge statistics and low-degree polynomials}}
+For a graph $G$ with vertex set $V(G) = \{1, \ldots, n\}$ and edge set $E(G)$,
+subset of vertices $U \subseteq V(G)$ with a vector
+$\mathbf{\xi} \in \{0,1\}^n$, where $\xi_i = 1$ if vertex $i$ is in $U$ and $\xi_i = 0$ otherwise.
+The number of edges $e(G[U])$ in the induced subgraph $G[U]$ can then be represented
+as the evaluation of a quadratic polynomial: $f(\mathbf{\xi}) = \sum_{\{i,j\} \in E(G)} \xi_i \xi_j$
+where the sum runs over all edges in $E(G)$. 
+
+the statement that G has an induced subgraph with exactly x edges is precisely equivalent to
+the statement that there is a binary vector $\overline{\xi} \in \{ 0,1 \}^n $ with $f(\overline{\xi})=x $
+
+Recent studies focus on random variables e(G[U]) for graphs G and random vertex sets U,
+inspired by conjectures from Alon, Hefetz, Krivelevich, and Tyomkyn.~\cite{alon2020edge}.
+
+\subsection{Theorem2}
+\textit{Fix} $C, \lambda > 0$, \textit{let} $G$ \textit{be a} $C$-\textit{Ramsey graph on} $n$ \textit{vertices, and let} $\lambda \leq p \leq 1 - \lambda$. \textit{Then if} $U$ \textit{is a random subset of} $V(G)$ \textit{obtained by independently including each vertex with probability} $p$, \textit{we have}
+$\sup_{x \in \mathbb{Z}} \Pr[e(G[U]) = x] \leq K_{C\lambda} n^{-3/2}$
+\textit{for some} $K_{C\lambda} > 0$ \textit{depending only on} $C$ \textit{and} $\lambda$. \textit{Furthermore, for every fixed} $A > 0$, \textit{we have}
+
+$
+\inf_{x \in \mathbb{Z}, |x - p^2 e(G)| \leq An^{3/2}} \Pr[e(G[U]) = x] \geq \kappa_{C A \lambda} n^{-3/2}
+$
+\textit{for some} $\kappa_{C A \lambda} > 0$ \textit{depending only on} $C$, $A$, \textit{and} $\lambda$, \textit{if} $n$ \textit{is sufficiently large in terms of} $C$, $\lambda$, \textit{and} $A$.
+In the contexts of this Theorem it's noted that
+the distribution of the number of edges,
+$e(G[U])$, in a subset $U$ of a graph $G$,
+adheres to a central limit theorem [~\cite{berkowitz2018local},~\cite{berkowitz2016quantitative}, ~\cite{gilmer2016local},~\cite{gnedenko1948local} ], suggesting
+$\Pr[e(G[U]) \leq x] = \Phi\left(\frac{x - \mu}{\sigma}\right) + o\left(\frac{1}{\sigma}\right)$,
+with $\Phi$ representing the Gaussian CDF, and $\mu, \sigma$ the mean and standard deviation.
+However, due to the degree sequence's additive structure,
+a local central limit theorem, which would adjust to
+$\Pr[e(G[U]) = x] = \frac{\Phi\left(\frac{x-\mu}{\sigma}\right)}{\sigma} +o\left(\frac{1}{\sigma}\right)$
+using the Gaussian density function, does not generally hold.
+
+\subsection{Small-ball probability for quadratic Gaussian chaos} 
+The study of low-degree polynomials of independent random variables,
+frequently referred to as chaoses,possesses noteworthy contributions within this domain.
+for example in the paper of Kim-Vu polynomial concentration
+~\cite{kim2000concentration}\dots. 
+This area of research offers insights into the behavior and 
+characteristics of such polynomials and described as the fundamental tools
+in probabilistic combinatorics, high-dimensional statistics, the analysis
+of boolean functions and mathematical modeling.
+Much of this study has focused on low-degree polynomials of Gaussian random variables, which enjoy
+certain symmetry properties that make them easier to study. While this direction may not seem obviously
+relevant to the previous theorem,
+part of the proof related to applying the celebrated 
+Gaussian invariance principle of Mossel O'Donnell, and Oleszkiewicsz
+~\cite{mossel2005noise}
+to compare our random variables of interest with certain “Gaussian analogs”.
+Hence, an essential phase in the demonstration of Theorem entails examining the small-ball
+probability associated with quadratic polynomials of Gaussian random variables.
+The Carbery-Wright theorem represents the foundational principle within this field of study
+% ~\cite{carbery2001distributional}
+Which says that for $ 0 < \epsilon < 1 $ and any real quadratic polynomial $f=f(Z_1,\dots,Z_n)$ 
+of independent standard Gaussian random variable $Z_1,\dots,Z_n ~ \mathcal{N}(0,1)$ 
+we have $\sup_{x \in \mathbb{R}} \Pr[|f - x| \leq \varepsilon] = O\left(\sqrt{\frac{\varepsilon}{\sigma(f)}}\right)$
+or any quadratic polynomial of 
+independent standard Gaussian variables and for any small epsilon,
+the supremum of the probability that the polynomial's
+deviation from any real value is within epsilon scales optimally
+with epsilon over the standard deviation of the polynomial
+Let $Z = (Z_1, \ldots, Z_n)$ be a vector of independent standard Gaussian random variables,
+and consider a real quadratic polynomial
+$f(Z) = Z^T F Z + f^T Z + f_0$, where $F$ is a nonzero symmetric matrix in
+$\mathbb{R}^{n \times n}$, $f$ is a vector in $\mathbb{R}^n$, and $f_0$ is a real number.
+Suppose that for some positive constant $\eta$, for any symmetric matrix $G$ of rank at most $2$,
+the smallest eigenvalue of $F - G$ in the Frobenius norm is at least $\eta$. Then, for any $\epsilon > 0$ 
+and any real number $x$, there exists a constant $C_{\eta}$, depending only on $\eta$, such that
+$
+\Pr\left( |f(Z) - x| < \epsilon \right) \leq \frac{C_{\eta} \epsilon}{\sigma(f(Z))},
+$
+where $\sigma(f(Z))$ denotes the standard deviation of $f(Z)$.
+
+quadratic forms with robust rank 2, such as \( Z_1^2 - Z_2^2 \),
+may not conform due to logarithmic scaling in their probability measures as \( \epsilon \)
+approaches zero. 
+Furthermore, the theorem is indicative of an inverse theorem,
+stating that atypical small-ball behavior corresponds to the form's
+closeness to a low-rank quadratic form, 
+reflecting the insights from the Littlewood-Offord problem.
+Kane's structure theorem~\cite{kane2017structure} further elaborates that quadratic polynomials
+of Gaussian variables can be `decomposed' into parts with standard small-ball behavior,
+facilitating a simpler analysis of their overall behavior.
+
+Regarding Ramsey graphs adjacency matrices,
+which are observed to have robustly high rank.
+This property is related for applying the previous theorem,
+in particular, a deeper examination into the rank
+partitioning into submatrices (Lemma 10.1 in the paper).
+The relationship between graph rank and the absence of large homogeneous sets suggests
+intriguing implications for communication complexity,
+specifically in the context of the log-rank conjecture.
+Additionally, the research extends to demonstrate that binary matrices,
+which approximate a low-rank real matrix,
+closely mirror a low-rank binary matrix (Proposition 10.2 in the paper),
+presenting potential for broader applications beyond Ramsey graph analysis.
+
+Limitations in precisely determining edge counts \(e(G[U])\)
+in Ramsey graphs via Fourier-analytic estimates,
+introduces an averaged version of the \textbf{switching method.}
+This method quantifies transitions between outcomes of events, focusing on small
+perturbations within a random set \(U\). By examining moments of these transition
+counts and applying the Cauchy-Schwarz inequality, the approach refines probability
+estimates, potentially extending its application beyond Ramsey graphs.
+
