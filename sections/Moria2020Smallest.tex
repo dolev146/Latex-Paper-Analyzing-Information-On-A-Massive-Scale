@@ -1,0 +1,11 @@
+~\cite{jain2020smallest}
+In this article the authors explores the behavior of the smallest singular value in n $\times$ n random symmetric matrices  $A_n(ij) = A_n(ji)$. 
+They investigate $M_n$ random matrix $n\times n$ each of the entries is an independent copy of a sub-Gaussian random variables $\xi$ with mean $0$ and variance $1$.
+The smallest singular value of $M_n$ is denoted as $s_n(M_n)$, defined as: $s_n(M_n) = inf_{v \in \mathbb{S}^{n-1}} \|Mv\|_2$ where $\mathbb{S}^{n-1}$ is the unit sphere in $\mathbb{R}^n$ \textbf{(from The Littlewood-Offord problem and invertibility of random matrices)}.
+The main result shows that for a random symmetric matrix $A_n$ with sub-Gaussian entries, the probability of $s_n(A_n)$ being less than $\epsilon/\sqrt{n}$ is bounded by: $P[s_n(A_n)\leq \epsilon/\sqrt{n}]\leq C \epsilon^{1/8}+2e^{-c n^{1/2}}$ for all $\epsilon \geq 0$, where $C$ and $c$ are constants depending on the sub-Gaussian norm of $\xi$.
+When $\xi$ is a Rademacher random variable, the probability bound becomes: $P[s_n(A_n) \leq \epsilon / \sqrt{n}] \leq O(\epsilon^{1/8}+ \exp(-\Omega((\log{n})^{1/4}n^{1/2})))$
+It also mentions the Median Regularized Least Common Denominator (MRLCD) and the Median Threshold.
+These notions improve upon the Regularized Least Common Denominator (RLCD) by efficiently utilizing the arithmetic structure of vectors, particularly when many projections of a vector are arithmetically unstructured.
+They demonstrate that the MRLCD and median threshold have level sets that can be covered by sufficiently small nets at the appropriate scale, which is crucial for their applications. 
+These new concepts can replace RLCD in various applications and are expected to provide better quantitative estimates. 
+ 
