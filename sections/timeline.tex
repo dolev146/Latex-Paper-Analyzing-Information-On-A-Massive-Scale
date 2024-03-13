@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+    \draw[line width=1pt] (0,0) -- (15.75,0);
+    \foreach \x/\year in {0/9.5.05, 1.75/31.1.08, 3.5/9.2.09, 5.25/10.8.20, 7/3.9.20, 8.75/3.11.20, 10.5/5.11.20, 12.25/5.5.21, 14/4.8.22, 15.75/22.12.23} {
+            \draw (\x,-0.2) -- (\x,0.1);
+            \node[below] at (\x,-0.1) {\year};
+        }
+    % Articles
+    \draw[red, fill=red] (0,0) circle (3pt) node[above, black] {~\cite{costello2005random}};
+    \draw[blue, fill=blue] (1.75,0) circle (3pt) node[above, black] {~\cite{rudelson2008littlewood}};
+    \draw[green, fill=green] (3.5,0) circle (3pt) node[above, black] {~\cite{costello2009bilinear}};
+    \draw[yellow, fill=yellow] (5.25,0) circle (3pt) node[above, black] {~\cite{kwan2019algebraic}};
+    \draw[purple, fill=purple] (7,0) circle (3pt) node[above, black] {~\cite{jain2020smoothed}};
+    \draw[black!30!green, fill=black!30!green] (8.75,0) circle (3pt) node[above, black] {~\cite{jain2020smallest}};
+    \draw[orange, fill=orange] (10.5,0) circle (3pt) node[above, black] {~\cite{campos2020singularity}};
+    \draw[cyan, fill=cyan] (12.25,0) circle (3pt) node[above, black] {~\cite{jain2021singularity}};
+    \draw[black!50, fill=black!50] (14,0) circle (3pt) node[above, black] {~\cite{kwan2022anticoncentration}};
+    \draw[magenta, fill=magenta] (15.75,0) circle (3pt) node[above, black] {~\cite{kwan2023resolution}};
+\end{tikzpicture}

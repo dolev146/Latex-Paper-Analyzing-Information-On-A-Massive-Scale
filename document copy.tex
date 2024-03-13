@@ -1,0 +1,168 @@
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage[left=20mm,right=20mm,top=10mm,bottom=17mm, paper=a4paper]{geometry}
+
+\title{SINGULARITY OF DISCRETE RANDOM MATRICES - Summary}
+\author{Moria Grohar}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Basic Problem}
+\textbf{Singularity of random Bernoulli matrices:} \\
+Let ${M_n}$ be an n $\times$ n random matrix with each entry an independent $Ber(1/2)$ random variable: \\
+Estimate $ q_n := \mathbb{P}[M_n$ is singular$]=\mathbb{P}[$zero row or column$]+ (1+o_n(1))\mathbb{P}[$two equal (up to sign) rows or columns$]$
+thereby confirming a folklore conjecture.
+\subsection{First main result:}
+\label{sec:first_main_results}
+
+Let $\xi$ be a discrete random variable, let $s_n(M_n)$ and let $M_n(\xi)$ be an n X n random matrix whose entries are independent copies of $\xi$. Then:
+
+$\mathbb{P}[M_n$ is singular$]= (1+o_n(1))(2n\mathbb{P}[\mathcal{E}{e1}]+n(n-1)\mathbb{P}[\mathcal{E}_{e1-e2}]+n(n-1)\mathbb{P}[\mathcal{E}_{e1+e2}])$\\
+upper bound:
+$$\mathbb{P}[s_n(M_n(\xi)) \leq t/\sqrt{n}] \leq C_\xi t+2n\mathbb{P}[\mathcal{E}_{e1}]+(1+\epsilon)^n\mathbb{P}[\mathcal{E}_{e1-e2}].$$
+
+upper bound for non-uniform discrete distributions is strictly stronger:
+$$\mathbb{P}[s_n(M_n(\xi)) \leq t/\sqrt{n}] \leq C_\xi t+2n\mathbb{P}[\mathcal{E}_{e1}]+(1+O(\exp(-c_\xi n)))(n(n-1)\mathbb{P}[\mathcal{E}_{e1+e2}]+n(n-1)\mathbb{P}[\mathcal{E}_{e1-e2}]).$$
+Lower bound:  $ q_n \geq (n^2 + n) \cdot 0.5^n $\\
+\subsection{Previous work:}
+
+Komlós (1967): $q_n = o_n(1)$ \\
+Kahn-Komlós-Szemerédi (1995): $q_n \leq (0.999+o_n(1))^n$ \\
+Tao-Vu (2006, 2007): $q_n \leq (0.75 + o_n(1))^n$ \\
+Kahn-Komlós-Szemerédi (2010): $q_n \leq (1/\sqrt{2} +o_n(1))^n$ \\
+Tikhomirov (2018): $q_n =(0.5 +o_n(1))^n$ \\
+
+\section{Previous Results}
+\subsection{Strong invertibility of sparse Bernoulli matrices:}
+Let ${M_n}$ be an n $\times$ n random matrix with each entry an independent $Ber(\rho)$ random variable for $\rho \in (0, 1/2)$: \\
+Conjecture (Folklore):
+
+$q_n = (1 + o_n(1)) \cdot \mathbb{P}[$zero row or column$] = (1 + o_n(1)) \cdot 2n(1-p)^n$ \\
+\\\textbf{Works in the past about this problem:} \\
+Previous studies on singularity probability achieved suboptimal results or only applied to specific distributions.\\
+
+Basak and Redelson (2018): ${\rho}_n \in n^{-1} \cdot (\log{n} \pm \omega(1))$.
+
+Litvak and Tikhomirov (2020): ${Cn^{-1} \cdot \log{n} \leq {\rho}_n \leq c}$.
+
+Huang (2020): ${n^{-1} \cdot \log{n} \leq {\rho}_n \leq \omega(n^{-1} \cdot \log{n})}$.\\
+What about  $\rho \in (0, 1/2)$?
+
+Tikhomirov (2018): ${\rho}_n = ( 1 - \rho + o_n(1))^n$. - best results \\
+Before this work, no analogous result existed.\\
+This paper significantly improves these limitations:
+
+$\bullet$ {Solves \ref*{sec:first_main_results} for a wider range of sparse Bernoulli distributions.}
+
+$\bullet$ {Obtains the correct base of the exponent for general discrete distributions (unlike prior work).}
+
+Finally, it mentions potential issues with a recent claim by another researcher on a related topic.
+
+\subsection{Second main result:}
+\label{sec:second_main_results}
+
+Fix a discrete distribution $\xi$. There exist $\delta, \rho, \eta > 0$ depending on $\xi$ such that for all sufficiently large $n$ and $t \leq 1$,
+$$\mathbb{P}[\inf_{x\in Cons(\delta,\rho)}||M_n(\xi)x||_2\leq t] \leq n\mathbb{P}[\mathcal{E}_{e1}] + \left( \begin{array}{c} n \\ 2 \end{array} \right)(\mathbb{P}[\mathcal{E}_{e1-e2}]+\mathbb{P}[\mathcal{E}_{e1+e2}]) + (t + \mathbb{P}[\mathcal{E}_{e1-e2}])e^{-\eta n}.$$
+the set $Cons(\delta,\rho)$ appearing above is the set of unit vectors which have at least $(1-\delta)n$ coordinates within distance $\rho/\sqrt{n}$ of each other.
+\section{General Setup}
+\subsection{Singularity of discrete random matrices:}
+Definition (Discrete random variable): A discrete random variable $\xi$ is a real-valued, non-constant, finitely supported random variable.
+
+Estimate $ q_n(\xi) := \mathbb{P}[M_n(\xi)$ is singular$] $.\\
+$ q_n(\xi) := (\alpha(\xi) + o_n(1))^n$ known for some special choices of $\xi $.\\
+$\bullet$ {Tikhomirov (2018): $ \xi = Ber(\rho) , \rho \in (0, 1/2]$}.\\
+$\bullet$ {Bourgain-Vu-Wood (2010): $ \xi = \pm 1$ w.p. 1/4, 0 w.p. 1/2 etc}.\\
+$\bullet$ {Notably, $ \xi = Ber(\rho), \rho \in (1/2, 1)$ was open}.\\
+
+\section{Conjecture}
+\subsection{Strong Singularity of discrete random matrices:}
+Conjecture (Folklore) - \textbf{first term}:
+
+$q_n = (1 + o_n(1))(\mathbb{P}[$zero row / column$] + \mathbb{P}[$two equal / opposite rows / columns$])$. \\
+Theorem (J.-Sah-Sawhnwy, 2020):
+
+For $\xi$ not uniform on its support,
+
+$q_n(\xi) = \mathbb{P}[$zero row / column$] + (1 + O(e^{-c_{\xi}n}))\mathbb{P}[$two equal / opposite rows / columns$]$. \\
+$\bullet$ {For $ \xi = Ber(\rho), \rho in (0, 1/2)$, get \textbf{first two} terms of the expansion}:
+
+$q_n(\xi) = 2n(1-\xi)^n + (n^2 - n)(\xi^2 + (1- \xi)^2)^n + ...$\\
+$\bullet$ {For $ \xi = Ber(\rho), \rho in (1/2, 1)$, get the first term of the expansion}:
+
+$q_n(\xi) = (n^2 - n)(\xi^2 + (1- \xi)^2)^n + ...$
+
+\subsection{Singularity of combinatorial random matrices:}
+
+Let ${M_n}$ be an n $\times$ n matrix, each row is independently sampled from $\{0, 1\}^n_{\lfloor n/2\rfloor}$.\\
+Conjecture (Nguyen, 2011):
+
+$q_n := \mathbb{P}[M_n$ is singular$] = (1 + o_n(1))^n $. \\
+$\bullet$ {Nguyen (2011): $ q_n \leq O_c(n^{-c})$ for any $c > 0$}.\\
+$\bullet$ {Ferber-J.-Luh-Samotij (2019): $ q_n \leq C \exp (-n^{c})$}.\\
+$\bullet$ {Tran (2020): $ q_n \leq  C \exp (-cn)$}.\\
+Theorem (J.-Sah-Sawhnwy, 2020): $q_n = (1.2 + O_n(1))^n$. \\
+
+\section{Proof of Singularity}
+\subsection{Littlewood-Offord theory:}
+The Littlewood-Offord Problem (1943):
+
+Let $a_1, ..., a_n$ be a nonzero integers, and let $\epsilon_1,...,\epsilon_n$ be i.i.d. Rademacher random cariables.
+
+For a given $x \in \mathbb{Z}$, how big can $\mathbb{P}[\epsilon_1a_1+\cdot \cdot \cdot +\epsilon_na_n=x]$ be?\\
+Let $a=(a_1, ..., a_n)$ and define its atom probability to be:
+
+$\rho(a):= \sup_{x \in \mathbb{Z}}\mathbb{P}[\epsilon_1a_1+\cdot \cdot \cdot +\epsilon_na_n=x]$.\\
+With the help of this equation, We can find the minimum value for some input.\\
+Examples:
+
+$\bullet$ {If $ a=(10,100,1000,...,10^n)$, then $\rho(a) = 2^{-n}$}.
+
+$\bullet$ {If $ a=(1,...,1)$, then $\rho(a) = 2^{-n}\left( \begin{array}{c} n \\ {\lfloor n/2 \rfloor} \end{array} \right)$}.
+
+Littlewood-Offord (1943) showed that $\rho(a):= O(n^{-1/2}\log{n})$.\\
+Theorem (Erd\H{o}s,1945)
+
+$\rho(a) \leq \frac{\left( \begin{array}{c} n \\ {\lfloor n/2 \rfloor} \end{array} \right)
+    }{2^n} = O(n^{-1/2})$.
+Note that the left inequality is tight by the example we discussed.\\
+Proof:\\
+
+Fix $x \in \mathbb{Z}$ W.l.o.g, we may assume that $a_i > 0$ for all $i \in [n].$ Let $\mathcal{A}$ denote the collection of all $A \subseteq [n]$ such that $\sum_{x \in A} a_i - \sum_{j \in A^c} a_j = x$. Since $a_i >0$ for all $i \in [n]$, $\mathcal{A}$ is an anti-chain. Hence, by Sperner's lemma, $|\mathcal{A}| \leq \left( \begin{array}{c} n \\ {\lfloor n/2 \rfloor} \end{array} \right).  \square$
+
+For every $ \epsilon > 0$, there exists $C_\epsilon$ depending on $\epsilon$ such that for all sufficiently large n, and for all $t \geq 0$, $\mathbb{P}[S_n(Q_n)\leq t/\sqrt{n}] \leq C_\epsilon t +(1/2 +\epsilon)^n$
+\subsection{Techniques}
+
+We use the high-level strategy of dividing the unit sphere into 'structured' and 'unstructured' components, and estimating the contribution of each part separately.
+However, this approach faces challenges, particularly in ensuring the invertibility of random matrices.
+In the analysis of structured vectors, it's necessary to consider scenarios where rows or columns may be equal, whereas previous studies typically only addressed cases where a single row or column was zero.
+Obtaining such estimates, even for simpler cases like the Boolean slice, is a complex task tackled in recent work by Litvak and Tikhomirov using the concept of 'UDLCD'.
+
+\subsection{Structured vectors:}
+\textbf{Overall Goal:} Analyze structured vectors' contribution to singularity probability in random matrices.\\
+\textbf{Types of Structured Vectors:}
+
+$\bullet${Elementary: Close to standard basis vectors (e.g., close to e1).}
+
+$\bullet${Non-elementary: Not close to any single basis vector but still exhibit some structure.}\\
+\textbf{Steps:}
+
+$\bullet${\textbf{Develop novel anti-concentration estimates:} Propositions: Propositions 5.2[Fix a discrete distribution $\xi$ and $\delta \in (0, 1/2)$. There exists $\theta = \theta(\delta, \mathcal{E}) > 0$ such that for all $x \in \mathbb{S}^{n-1}\ Elem'(\delta) $, $\mathfrak{L}_\mathcal{E}(b_1x_1+\cdots+b_nx_n,0)\leq ||\overrightarrow{p}||_2^2-\theta]$ 
+and 5.3 [the only difference between 5.2 and 5.3 is that in 5.3 they also add: 'Suppose that $\xi$ is not a translate of any origin-symmetric distribution.'] for non-elementary vectors.}
+
+$\bullet${\textbf{New technique for analyzing elementary vectors:} Using the example of $e_1$, demonstrates that a small image leads to either a zero first column or a specific subset with low probability.}
+
+$\bullet${\textbf{Expansion to general distributions:} Extend analysis to other elementary vectors (close to $(e_i \pm e_j)/\sqrt{2}$ or $e_i$) using rotations and preliminary estimates.}\\
+Current Limitation: Missing a sharp analysis for unstructured vectors when the distribution is uniform.\\
+Overall Significance: This research significantly advances the understanding of how structured vectors influence the invertibility of random matrices, paving the way for further analysis of unstructured cases.
+\subsection{Unstructured vectors:}
+Unlike "structured" vectors with similar components, "unstructured" vectors in random matrices have diverse values. The authors exploit this non-uniformity to analyze them. They introduce a novel "multi-slice" theorem to handle these vectors, overcoming challenges of dependence and non-integer values. This method offers a powerful tool for understanding how unstructured vectors influence the invertibility of random matrices, building upon previous work on simpler cases.
+\section{Notation}
+The notation defines key terms like unit vectors, Euclidean balls, norms, and specific sets used in the analysis.
+Additionally, it clarifies the meaning of a discrete random variable and its corresponding random matrix, which are central concepts for the research presented.
+
+\end{document}
+
