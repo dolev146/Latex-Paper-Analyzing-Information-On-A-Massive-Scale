@@ -1,7 +1,7 @@
-\subsection{Resolution of the quadratic Littlewood--Offord problem}
+\subsection{Resolution of the quadratic Littlewood-Offord problem}
 
 
-In the article "Resolution of the quadratic Littlewood--Offord problem"~\cite{kwan2023resolution} by M. Kwan and K. Sauremann, the authors claim to have succeeded in finding a unique value for the quadratic polynomial $Q(\xi_1,\ldots,\xi_n)$, where $\xi_1,\ldots,\xi_n$ are independent Rademacher random variables.
+In the article "Resolution of the quadratic Littlewood-Offord problem"~\cite{kwan2023resolution} by M. Kwan and L. Sauremann, the authors claim to have succeeded in finding a unique value for the quadratic polynomial $Q(\xi_1,\ldots,\xi_n)$, where $\xi_1,\ldots,\xi_n$ are independent Rademacher random variables.
  
 Specifically, if $Q(\xi_1,\ldots,\xi_n)$ strongly depends on at least $m$ of the variables $\xi_i$, such that there is no way to determine the value of $Q(\xi_1,\ldots,\xi_n)$ by fixing values for fewer than $m$ of the variables $\xi_i$, then:
 $\Pr[Q(\xi_1,\ldots,\xi_n) = 0] \leq O(1/\sqrt{m})$. A similar result holds when $\xi_1,\ldots,\xi_n$ have arbitrary distributions.
@@ -30,12 +30,12 @@ Their result received significant attention and was sharpened by Erdős in 1945,
 \newline
 This result, obtained in the case where all coefficients $a_i$ are equal, is the best possible.
  
-The linear Littlewood–Offord problem has been extensively studied, leading to investigations into the quadratic Littlewood–Offord problem. A question arises: what are the limits, we can find for the concentration point of the quadratic polynomial $Q(\xi_1,\ldots,\xi_n)$ when $\xi_1,\ldots,\xi_n$ are independent and random Rademacher variables? This question came to the forefront of research in 2005 in a paper by K. P. Costello, T. Tao, and V. Vu ("Random Symmetric Matrices Are Almost Surely Non-Singular"), where they used such a limit in their proof of Weiss's conjecture on random singular matrices, specifically proving that if the quadratic polynomial $Q \in \mathbb{R}[x_i \ldots x_n]$ has at least $cn^2$ coefficients that are non-zero for a constant $c > 0$, then for $X = Q(\xi_1,\ldots,\xi_n)$, where the $\xi_i$ are independent and random Rademacher variables:
+The linear Littlewood–Offord problem has been extensively studied, leading to investigations into the quadratic Littlewood–Offord problem. A question arises: what are the limits, we can find for the concentration point of the quadratic polynomial $Q(\xi_1,\ldots,\xi_n)$ when $\xi_1,\ldots,\xi_n$ are independent and random Rademacher variables? This question came to the forefront of research in 2005 in a paper by K. P. Costello, T. Tao, and V. Vu ("Random Symmetric Matrices Are Almost Surely Non-Singular"~\cite{costello2005random}), where they used such a limit in their proof of Weiss's conjecture on random singular matrices, specifically proving that if the quadratic polynomial $Q \in \mathbb{R}[x_i \ldots x_n]$ has at least $cn^2$ coefficients that are non-zero for a constant $c > 0$, then for $X = Q(\xi_1,\ldots,\xi_n)$, where the $\xi_i$ are independent and random Rademacher variables:
 \vspace{-0.24\baselineskip}
 \[ \sup_{z\in\mathbb{R}} \Pr[X=z] \leq O(1/n^{1/8}) \vspace{-0.27\baselineskip} \]
 Previously, K. P. Costello, T. Tao, and V. Vu, as well as A. Ferber, V. Jain, and Y. Zhao, have recognized that this result was not optimal and one can expect to achieve a similar limit to that of the linear Littlewood–Offord problem.
  
-The first improvement was made by Costello and Vu ("The rank of random graphs"), showing how to prove that the limit is of the form $O(n^{-1/4})$. Further improvement, almost optimal, was achieved by Costello in the paper "Bilinear and quadratic variants on the Littlewood-Offord problem" to $O(n^{-1/2+\varepsilon})$ for any constant $\varepsilon > 0$. Through a different method, Meka, Nguyen, and Vu further extended the bound to $\exp(O(\log\log n)^2))/\sqrt{n}$, before it was observed that the bound $(\log n)^{O(1)}/\sqrt{n}$ follows from a strong general result by Kane.
+The first improvement was made by Costello and Vu ("The rank of random graphs"~\cite{costello2008rank}), showing how to prove that the limit is of the form $O(n^{-1/4})$. Further improvement, almost optimal, was achieved by Costello in the paper "Bilinear and quadratic variants on the Littlewood-Offord problem"~\cite{costello2009bilinear} to $O(n^{-1/2+\varepsilon})$ for any constant $\varepsilon > 0$. Through a different method, Meka, Nguyen, and Vu further extended the bound to $\exp(O(\log\log n)^2))/\sqrt{n}$, before it was observed that the bound $(\log n)^{O(1)}/\sqrt{n}$ follows from a strong general result by Kane.
  
 In this article, we finally solve the quadratic problem of the Littlewood–Offord problem up to constant factors, reaching the optimal limit of $O(1/\sqrt{n})$. We also utilize weaker assumptions about $Q$.
  
