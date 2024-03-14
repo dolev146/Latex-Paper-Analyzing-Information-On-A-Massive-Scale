@@ -1,34 +1,24 @@
-~\cite{jain2020smallest}
-In this article, the authors deal with the behavior of the smallest singular value in n $\times$ n random symmetric matrices  $A_n(ij) = A_n(ji)$.
-They focus on $M_n$ random matrices of size $n\times n$, where the entry is an independent copy of a sub-Gaussian random variable $\xi$ with mean 0 and variance 1.
-The probability that the smallest singular value $S_n(A_n)$ of $A_n$ is less than or equal to $\epsilon\sqrt{n}$ is limited by:
+\newpage~\cite{jain2020smallest} 
+This study examines the smallest singular value of n $\times$ n random symmetric matrices $A_n(ij) = A_n(ji)$, with entries as independent copies of a sub-Gaussian random variable $\xi$ (mean 0, variance 1).
+The probability that $S_n(A_n) \leq \epsilon\sqrt{n}$ is bounded by:
 \begin{equation*}
     \mathbb{P}[S_n(A_n) \leq \epsilon \sqrt{n}] \leq O_\xi(\epsilon^{1/8} + \exp(-\Omega_\xi(n^{1/2}))) \text{ for all } \epsilon \geq 0.
 \end{equation*}
-This inequality improves a Vershynin result by extending it to a broader class of random variables and strengthening the quantitative estimates.
-The smallest singular value $s_n(M_n)$ of $M_n$ is denoted as:
-\begin{equation*}
-    s_n(M_n) = inf_{v \in \mathbb{S}^{n-1}} \|Mv\|_2
-\end{equation*}
+This improves a Vershynin result, extending it to a broader class of random variables.
+The smallest singular value $s_n(M_n)$ of $M_n$ is defined as: $s_n(M_n) = inf_{v \in \mathbb{S}^{n-1}} \|Mv\|_2$
 where $\mathbb{S}^{n-1}$ represents the unit sphere in $\mathbb{R}^n$ ~\cite{rudelson2008littlewood}.
-For a random symmetric matrix $A_n$ with sub-Gaussian entries, the probability that $s_n(A_n)$ is less than $\epsilon/\sqrt{n}$ is bounded by:
+For a random symmetric matrix $A_n$ with sub-Gaussian entries, the probability that $s_n(A_n) \leq \epsilon/\sqrt{n}$ is bounded by:
 \begin{equation*}
-    P[s_n(A_n)\leq \epsilon/\sqrt{n}]\leq C \epsilon^{1/8}+2e^{-c n^{1/2}} \text{ for all } \epsilon \geq 0
+    \mathbb{P}[s_n(A_n)\leq \epsilon/\sqrt{n}]\leq C \epsilon^{1/8}+2e^{-c n^{1/2}} \text{ for all } \epsilon \geq 0
 \end{equation*}
 where $C$ and $c$ are constants that depend on the sub-Gaussian norm of $\xi$.
-When $\xi$ is a Rademacher random variable, the probability bound:
+When $\xi$ is a Rademacher random variable, the probability bound is:
 \begin{equation*}
     P[s_n(A_n) \leq \epsilon / \sqrt{n}] \leq O(\epsilon^{1/8}+ \exp(-\Omega((\log{n})^{1/4}n^{1/2})))
 \end{equation*}
-This article introduces the Median Regularized Least Common Denominator (MRLCD) and the Median Threshold, which enhance the Regularized Least Common Denominator (RLCD) by leveraging the arithmetic structure of vectors.
-These new concepts offer improved quantitative estimates and can replace RLCD in various applications.\\
-The methods employed in the article include probabilistic techniques, concentration inequalities, and analysis of random matrix theory.
-These methods provide a systematic approach to analyzing the singularity properties of random matrices and deriving tight bounds on their singular values.
-The advantages of using these methods lie in their ability to capture the probabilistic nature of random matrices and provide rigorous probabilistic guarantees.\\
-The authors had to overcome challenges related to optimizing probability bounds, extending results to different random variables, and refining the analysis to address the complexities of random symmetric matrices.\\
-The article mentions two prominent examples of random matrices:\\
-\textbf{Ginibre Ensemble:} This ensemble corresponds to the case where the entries of the random matrix are independent copies of a Gaussian random variable with mean 0 and variance 1. The Ginibre Ensemble is a well-studied example in random matrix theory and is often used to analyze the properties of random matrices ~\cite{bourgain2010singularity}.\\
-\textbf{i.i.d. Rademacher Matrices:} In this case, the random matrix consists of independent entries that are copies of a Rademacher random variable, which takes values ±1 with equal probability. i.i.d. Rademacher matrices are another important class of random matrices commonly studied in the context of random matrix theory ~\cite{bourgain2010singularity}.\\
-These examples serve as fundamental models for understanding the behavior of random matrices with specific distributions of entries.
-They provide insights into the properties and characteristics of random matrices under different types of random variables, facilitating the analysis and derivation of probabilistic bounds on singular values and singularity probabilities.
-Each result in the article introduces novel concepts and improvements, showcasing innovative approaches to analyzing random matrix properties.
+This article introduces the Median Regularized Least Common Denominator (MRLCD) and the Median Threshold, enhancing the Regularized Least Common Denominator (RLCD) by leveraging vector arithmetic structure.
+These concepts offer improved quantitative estimates and can replace RLCD in various applications.\\
+The methods include probabilistic techniques, concentration inequalities, and analysis of random matrix theory, providing systematic analysis of singularity properties and tight bounds on singular values.
+Challenges include optimizing probability bounds, extending results to different random variables, and refining the analysis for random symmetric matrices.\\
+The article mentions two prominent examples: Ginibre Ensemble, where entries are independent Gaussian random variable, and i.i.d. Rademacher Matrices, with entries being Rademacher random variable ~\cite{bourgain2010singularity}.\\
+These examples serve as fundamental models for understanding random matrix behavior under different distributions, facilitating probabilistic bound derivations.
