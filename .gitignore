@@ -21,3 +21,5 @@
 *.bbl-SAVE-ERROR
 *.pdf
 *.toc
+*.bbl-SAVE-ERROR
+*.bcf-SAVE-ERROR
