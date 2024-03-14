@@ -50,15 +50,7 @@ Until now, there have been several different proofs of the bound $O(1/\sqrt{n})$
 Unfortunately, in the quadratic problem (where $X$ is the quadratic polynomial $Q$), both of these properties fail dramatically. There are two general approaches that have been successful so far: Gaussian approximation and the decoupling technique.
  
 In this article, we take a different perspective on the decoupling technique. Instead of directly using decoupling to reduce the quadratic problem to a linear one, we reinterpret decoupling as a tool to create a problem with both linear and quadratic components. Inductively, we aim to "reduce the proportion of our problem that is quadratic" gradually to a linear form. To explain this concept, the authors rely on a geometric perspective.
- 
-*****The proof, as outlined, relies on bounds on probabilities that random vectors lie in certain affine-linear subspaces. More specifically, for a suitably nondegenerate affine-linear subspace $W \subseteq \mathbb{R}^n$ of codimension $k$, and a uniformly random vector $\vec{\xi} \in \{1,-1\}^n$, we need a probability bound of the form $\Pr[\vec{\xi} \in W] \leq O(n^{-k/2})$. Intuitively, this is because $\vec{\xi}$ needs to simultaneously satisfy $k$ different linear equations, each of which is satisfied with probability roughly $n^{-1/2}$. More formally, such a bound follows from a high-dimensional version of the Erdős–Littlewood–Offord theorem.
- 
-The first such high-dimensional version was due to Halász, and several extensions and variants of Halasz’ inequality have since been proved.
- 
-Of course, whenever one wants to apply any Halász-type theorem, one needs a “robust rank” condition to hold. So, in order to execute the strategy described, at each step of the decoupling scheme we need a “robust rank inheritance” lemma, proving that a robust rank condition is likely to hold for the next step, given that it holds for the current step. The key ingredient for our robust rank inheritance lemma is a new high-dimensional anticoncentration inequality for the probability that a random vector falls in a small ball in the Hamming norm. We believe this inequality (and the techniques in its proof) to be of independent interest.
- 
-The authors remark that there is a way to sidestep the robust rank inheritance issue in the special case where $Q$ has “bounded rank”, meaning that the quadratic part of $Q$ can be written as $\vec{x}^T A \vec{x}$ for some symmetric matrix $A$ of rank $O(1)$. Indeed, in this case we can reduce our entire problem to a certain bounded-dimensional geometric anticoncentration problem.******
- 
+  
 \vspace{\baselineskip}
 The article identifies directions for future research, such as:
  
