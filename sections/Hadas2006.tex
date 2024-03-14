@@ -2,29 +2,20 @@
 \subsection{Random Symmetric Matrices Are Almost Surely Non-Singular}
 
 
-The article "Random Symmetric Matrices Are Almost Surely Non-Singular"~\cite{costello2005random} by K. Costello, T. Tao, and V. Vu, presents a significant result in the field of random matrices. The main finding of the paper is the proof that a symmetric random matrix \( Q_n \) with independent (identically distributed) Bernoulli random variables with upper diagonal entries is almost surely non-singular, with a probability of  \( 1-O(n^{-1/8+\delta}) \) for any \( \delta>0 \). This result extends previous results for random matrices to more general models of random matrices.
 
-The article presents the history of the non-singularity problem in random matrices, namely whether it is true that a random matrix \( A_n \) with independent Bernoulli variables is almost surely non-singular. This question was positively answered by Komlós in 1967, and later he generalized the result to more general models of random matrices. In a recent paper, Tao and Vu found a different proof for random matrices that provides a precise estimate for the absolute value of the determinant of the matrix \( A_n \).
-
-The authors build on these previous proofs and develop a quadratic version of Littlewood-Offord's linear theory concerning the convergence of random variables to prove the non-singularity (invertibility) of \(Q_n\) - a symmetric random matrix with independent (identically distributed) Bernoulli random variables. This version helps researchers overcome the row and column transposition, which was a hurdle in previous proofs for random matrices due to the dependence between the row vectors of the matrix \(Q_n\).
-
-In order to develop the quadratic version of Littlewood-Offord and prove it, the authors initially tried to invert the quadratic problem: \( Q=\sum_{1\leq i,j\leq n} c_{ij} z_i z_j \) for a linear problem: \( Q=\sum_{i=1}^n Q_i z_i \). The difficulty that arose is due to the fact that the coefficients \( Q_i \) depend on the variables \( z_i \). In order to overcome this problem, the authors used the "decoupling" technique.
-\vspace{\baselineskip}
-
-\textbf{Decoupling lemma:} Let \(X\) and \(Y\) be random variables and \(E=E(X,Y)\) be an event depending on \(X\) and \(Y\). Then:
+"Random Symmetric Matrices Are Almost Surely Non-Singular" by Costello, Tao, and Vu (\cite{costello2005random}) proves that symmetric random matrices \(Q_n\) with i.i.d. Bernoulli entries above the diagonal are almost surely non-singular. The non-singularity holds with probability \(1-O(n^{-1/8+\delta})\) for any \(\delta>0\), broadening earlier findings to a wider class of random matrices.
+The article delves into the history of non-singularity in random matrices, focusing on whether matrices like \(A_n\) with independent Bernoulli variables are almost surely non-singular. Komlós affirmed this in 1967 and later extended his findings. Tao and Vu, in a more recent work, introduced a novel proof offering a precise determinant estimate for \(A_n\), enriching the understanding of random matrix non-singularity.
+Building upon prior work, the authors propose a quadratic Littlewood-Offord theory to ascertain \(Q_n\)'s non-singularity, a symmetric matrix with i.i.d. Bernoulli variables. This approach addresses challenges like row and column transposition dependency. Attempting to linearize the quadratic \( Q=\sum_{1\leq i,j\leq n} c_{ij} z_i z_j \) into \( Q=\sum_{i=1}^n Q_i z_i \) revealed dependencies among \( Q_i \) coefficients on \( z_i \). To navigate this, "decoupling" was employed, refining the theoretical framework for random matrices' invertibility analysis.
+\textbf{Decoupling lemma:} Given random variables \(X\) and \(Y\), and an event \(E=E(X,Y)\) dependent on \(X\) and \(Y\), then:
 \[
 P(E(X,Y)) \leq (P(E(X,Y) \land E(X',Y) \land E(X,Y') \land E(X',Y')))^{1/4}
 \]
-
-where \(X'\) and \(Y'\) are independent copies of \(X\) and \(Y\), respectively. This method is used in other fields, such as graph theory.
-
-The article identifies open questions for future research in the field of random matrices:
-
+where \(X'\) and \(Y'\) are independent copies of \(X\) and \(Y\), respectively. This technique finds application across various domains, including graph theory.
+The article outlines open questions for future research in random matrices:
 \begin{itemize}
-    \item {Determinant Estimation:} The article raises the question of estimating the determinant of random matrices. The estimation provided in the article is: \( |\det(Q_n)| = n^{1/2-o(1)} \).
-    \item {Singularity Probability:} Another open question raised in the article relates to estimating the probability that a random matrix is singular. The authors estimate that the probability of \( Q_n \) being a singular matrix is \( (1/2+o(1))^n \).
+    \item \textbf{Determinant Estimation:} It questions how to estimate the determinant of random matrices, providing an initial estimate: \( |\det(Q_n)| = n^{1/2-o(1)} \).
+    \item \textbf{Singularity Probability:} It seeks to refine the estimation of the probability that a random matrix is singular, estimating \( Q_n \)'s singularity probability as \( (1/2+o(1))^n \).
 \end{itemize}
-
 \vspace{\baselineskip}
 \textbf{The quadratic variant of the Littlewood-Offord:}
 Let \( Q \) be a quadratic random variable defined as:
@@ -33,5 +24,6 @@ Let \( Q \) be a quadratic random variable defined as:
 where \( z_i \) are random variables, \( \{1,\ldots,n\} = U_1 \cup U_2 \) is a non-trivial partition, and \( S \) is a non-empty subset of \( U_1 \). For each \( i \in S \), let \( d_i \) be the number of indices \( j \in U_2 \) such that \( |c_{ij}| \geq 1 \). If \( d_i \geq 1 \) for each \( i \in S \), and \( I \) is an interval of length 1, then:
 \vspace{-0.9\baselineskip}
 \[ P(Q \in I) = O\left( |S|^{-1/2} + |S|^{-1} \sum_{i \in S} d_i^{-1/2} \right)^{1/4} \]
+
 
 
