@@ -1,18 +1,22 @@
 ~\cite{jain2021singularity}
 The article delves into the analysis of singularity probabilities of discrete n $\times$ n random matrices ${M_n}(\xi)$, where the entries are non-constant real-valued random variables $\xi$. 
-It investigates the probability of singularity, considering scenarios such as a zero row or column and two equal (up to sign) rows or columns in these matrices, thereby confirming a conjecture related to this topic. Particularly, the authors explore the behavior of structured and unstructured vectors concerning the invertibility of these matrices, providing precise results for various scenarios, including cases involving Bernoulli distributions.
-% It explores the probability of singularity $ \mathbb{P}[M_n$ is singular$]=\mathbb{P}[$zero row or column$]+ (1+o_n(1))\mathbb{P}[$two equal (up to sign) rows or columns$]$ in these random matrices and confirm a conjecture related to this topic. 
+It explores the probability of singularity $ \mathbb{P}[M_n$ is singular$]=\mathbb{P}[$zero row or column$]+ (1+o_n(1))\mathbb{P}[$two equal (up to sign) rows or columns$]$ in these random matrices and confirm a conjecture related to this topic. 
 The authors particularly exploring the behavior of structured and unstructured vectors in relation to the invertibility of these matrices. 
 They provide precise results for various scenarios, including cases involving Bernoulli distributions:\\
-\textbf{Example for Bernoulli Distribution with} $\rho \in (0, 1/2)$:
-$\mathbb{P}[M_n$ is singular$]=2n(1-\rho)^n + (1+o_n(1))n(n-1)(\rho^2+(1-\rho)^2)^n$.\\
-\textbf{For Bernoulli Distribution with} $\rho \in (1/2, 1)$:
-$\mathbb{P}[M_n$ is singular$]=(1+o_n(1))n(n-1)(\rho^2+(1-\rho)^2)^n$.\\
-The authors leverage previous works by Litvak and Tikhomirov [13] and Tikhomirov [23] to develop novel techniques for handling structured vectors, which are crucial for determining singularity probabilities.
-By introducing distinctions between elementary and non-elementary structured vectors, the research advances the understanding of how specific vector configurations impact the invertibility of random matrices.
+For Bernoulli distributions with $\rho$ in the ranges $(0,1/2)$ and (1/2,1), the singularity probabilities are calculated as follows:
+\begin{itemize}
+    \item \textbf{Example for Bernoulli Distribution with $\rho \in (0, 1/2)$}:
+    \[
+    \mathbb{P}[M_n \text{ is singular}] = 2n(1-\rho)^n + (1+o_n(1))n(n-1)(\rho^2+(1-\rho)^2)^n.
+    \]
+    \item \textbf{For Bernoulli Distribution with $\rho \in (1/2, 1)$}:
+    \[
+    \mathbb{P}[M_n \text{ is singular}] = (1+o_n(1))n(n-1)(\rho^2+(1-\rho)^2)^n.
+    \]
+\end{itemize}
 
-
-One key aspect of the study is the analysis of the contribution of the 'compressible' part of the unit sphere into 'structured' and 'unstructured' components to the lower tail of the smallest singular value of the matrices.
-By examining this contribution, the researchers aim to gain a deeper understanding of the processes occurring in these random matrices and identify the impact of specific subsets on the singular behavior of the matrices.
-In this article the novelties are:
-Unlike "structured" vectors with similar components, "unstructured" vectors in random matrices have diverse values. The authors exploit this non-uniformity to analyze them. They introduce a novel "multi-slice" theorem to handle these vectors, overcoming challenges of dependence and non-integer values. This method offers a powerful tool for understanding how unstructured vectors influence the invertibility of random matrices, building upon previous work on simpler cases.
+The authors leverage previous works by Litvak and Tikhomirov ~\cite{litvak2022singularity} and Tikhomirov ~\cite{tikhomirov2020singularity} to develop novel techniques for handling structured vectors, which are crucial for determining singularity probabilities.
+They distinguish between between elementary and non-elementary structured vectors, advancing the understanding of how specific vector configurations impact matrix invertibility.
+The authors leverage previous works by Litvak and Tikhomirov and Tikhomirov to develop novel techniques for handling structured vectors, crucial for determining singularity probabilities. They distinguish between elementary and non-elementary structured vectors, advancing the understanding of how specific vector configurations impact matrix invertibility.
+One significant aspect of the study involves analyzing the contribution of the 'compressible' part of the unit sphere into 'structured' and 'unstructured' components to the lower tail of the smallest singular value of the matrices. By examining this contribution, the researchers aim to deepen the understanding of processes occurring in these random matrices and identify the impact of specific subsets on the singular behavior of the matrices.
+Innovatively, unlike "structured" vectors with similar components, "unstructured" vectors in random matrices exhibit diverse values. The authors exploit this non-uniformity to analyze them, introducing a novel "multi-slice" theorem to handle these vectors, overcoming challenges of dependence and non-integer values. This method offers a powerful tool for understanding how unstructured vectors influence the invertibility of random matrices, building upon previous work on simpler cases.
