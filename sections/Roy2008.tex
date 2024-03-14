@@ -1,36 +1,33 @@
+\newpage
 \subsection{The Littlewood-Offord problem and invertibility of random matrices}
-Mark Rudelson and Roman Vershynin's work~\cite{rudelson2008littlewood} develops a general approach to the invertibility of random matrices, aiming to proves two basic conjectures on the distribution of the smallest singular value of random \(n \times n\) matrices with independent entries.\\\newline
+
+Mark Rudelson and Roman Vershynin's research~\cite{rudelson2008littlewood} develops a method to assess random matrix invertibility,  aiming to prove two basic conjectures on the distribution of the smallest singular value, which indicates the matrix's proximity to singularity.\newline
+
 \textbf{Theorem 1.1 (Invertibility: fourth moment).} Let \(A\) be an \(n \times n\) matrix whose entries are independent real random variables with variances at least \(1\) and fourth moments bounded by \(B\). Then, for every \(\delta > 0\) there exist \(\epsilon > 0\) and \(n_0\) which depend (polynomially) only on \(\delta\) and \(B\), and such that
 \begin{equation*}
-    [P(s_n(A) \leq \epsilon n^{-1/2}) \leq \delta] \text{ for all } (n \geq n_0).\\
+    P(s_n(A) \leq \epsilon n^{-1/2}) \leq \delta \text{ for all } n \geq n_0.
 \end{equation*}
+
 \textbf{Theorem 1.2 (Invertibility: subgaussian).} Let \(\xi_1, \ldots, \xi_n\) be independent centered real random variables with variances at least \(1\) and subgaussian moments bounded by \(B\). Let \(A\) be an \(n \times n\) matrix whose rows are independent copies of the random vector \((\xi_1, \ldots, \xi_n)\). Then for every \(\epsilon \geq 0\) one has
 \begin{equation*}
-    [P(s_n(A) \leq \epsilon n^{-1/2}) \leq C\epsilon + c^n,] \text{ where } (C > 0) \text{ and } (c \in (0, 1)) 
+    P(s_n(A) \leq \epsilon n^{-1/2}) \leq C\epsilon + c^n,
 \end{equation*}
-depend (polynomially) only on B.
-They prove both theorems using the inverse Littlewood-Offord problem. Inspired by Tau and Vu's recently proposed method to reduce the small ball probability to an arbitrary polynomial order by looking at the inverse problem:\\\newline
-\textbf{Theorem 1.3 (Tao, Vu).} Let \(a_1, \ldots, a_n\) be integers, and let \(A \geq 1\), \(\epsilon \in (0, 1)\). Suppose for the random sign-sums one has
-\[p_0(a) \geq n^{-A}.\]
-Then all except \(O_{A,\epsilon}(n^{\epsilon})\) coefficients \(a_k\) are contained in the Minkowski sum of \(O\left(\frac{A}{\epsilon}\right)\) arithmetic progressions of lengths \(n^{O_{A,\epsilon}(1)}\).\\
-Rudelson and Vershynin demonstrate that a similar phenomenon holds for real rather than integer numbers ak, for the small ball probabilities \(p_{\epsilon}(a)\) rather than the probability \(p_{0}(a)\) of exact values, and for general random sums rather than the random sign-sums.\\\newline
-\textbf{Theorem 1.5 (Small Ball Probability).} Let \(\xi_1, \ldots, \xi_n\) be independent identically distributed centered random variables with variances at least \(1\) and third moments bounded by \(B\). Let \(a = (a_1, \ldots, a_n)\) be a vector of real coefficients such that, for some \(K_1, K_2 > 0\) one has
-\[K_1 \leq |a_k| \leq K_2 \quad \text{for all } k.\]
+where \(C > 0\) and \(c \in (0, 1)\) depend (polynomially) only on \(B\).\newline
+
+They prove both theorems by studying the inverse Littlewood-Offord problem, inspired by Tau and Vu's proposed method to reduce the small ball probability to an arbitrary polynomial order by looking at the inverse problem. Rudelson and Vershynin demonstrate that a similar phenomenon holds in a more generalized case using the following theorem, which they also restate as an inverse Littlewood-Offord problem).\newline
+
+\textbf{Theorem 1.5 (Small Ball Probability).} Let \(\xi_1, \ldots, \xi_n\) be independent identically distributed centered random variables with variances at least \(1\) and third moments bounded by \(B\). Let \(a = (a_1, \ldots, a_n)\) be a vector of real coefficients such that, for some \(K_1, K_2 > 0\) one has \(K_1 \leq |a_k| \leq K_2\) for all \(k\).
 Let \(\alpha \in (0, 1)\) and \(\kappa \in (0, n)\). Then for every \(\epsilon \geq 0\) one has
 \[p_{\epsilon}(a) \leq \frac{C\sqrt{\kappa}}{\left(\epsilon + \frac{1}{D_{\alpha,\kappa}(a)}\right)} + C e^{-c\alpha^2\kappa},\]
-where \(C, c > 0\) depend (polynomially) only on \(B, K_1, K_2\).\\
-Theorem 1.5 can also be restated as an inverse Littlewood-Offord theorem:\\\newline
-\textbf{Corollary 1.6 (Inverse Littlewood-Offord Theorem).} Let \(a_1, \ldots, a_n\) be real numbers satisfying (1.11) and \(\xi_1, \ldots, \xi_n\) be random variables as in Theorem 1.5. Let \(A \geq \frac{1}{2}\), \(\kappa \in (0, n)\) and \(\epsilon > 0\). Suppose for the random sums (1.8) one has
-\[p_\epsilon(a) \geq n^{-A}.\]
-Then there exists an arithmetic progression of length \(L = O(n^{A\kappa^{-1/2}})\) and with gap between its elements \(d \leq 1\), and such that all except \(\kappa\) coefficients \(a_k\) are within distance \(O\left(\frac{A \log(n)}{\kappa}\right)^{1/2} \cdot d\) from the elements of the progression, provided that \(\epsilon \leq \frac{1}{L}\).\\
-Their proof for Theorem 1.5 utilizes Halász's method to assess the probability of small deviations by examining a vector's recurrence to an integer lattice. The technique leverages density arguments to show that closeness to distinct lattice points in a short timeframe implies a small least common denominator (LCD) for the vector, indicating a strong structural property of the vector in question.\\
-The paper's main result, the Strong Invertibility Theorem 5.1, reduces estimating the smallest singular value of random matrices
-to estimating the largest singular value, which is used to imply both Theorems 1.1 and 1.2.\\\newline
+where \(C, c > 0\) depend (polynomially) only on \(B, K_1, K_2\).
+\newline\newline
+Their proof for Theorem 1.5 utilizes Halász's method to assess the probability of small deviations by examining a vector's recurrence to an integer lattice. The technique leverages density arguments to show that closeness to distinct lattice points in a short timeframe implies a small least common denominator (LCD) for the vector, indicating a strong structural property of the vector in question.\newline\newline
+The paper's main result, the Strong Invertibility Theorem 5.1, reduces estimating the smallest singular value of random matrices to estimating the largest singular value, which is used to imply both Theorems 1.1 and 1.2.\newline\newline
 \textbf{Theorem 5.1 (Strong invertibility).} Let \(\xi_1, \ldots, \xi_n\) be independent centered random variables with variances at least \(1\) and fourth moments at most \(B\). Let \(A\) be an \(n \times n\) matrix whose rows are independent copies of the random vector \((\xi_1, \ldots, \xi_n)\). Let \(K \geq 1\). Then for every \(\epsilon \geq 0\) one has
 \[P(s_n(A) \leq \epsilon n^{-1/2}) \leq C\epsilon + c^n + P(\|A\| > K n^{1/2}),\]
-where \(C > 0\) and \(c \in (0, 1)\) depend (polynomially) only on \(B\) and \(K\).\\
-The general approach to invertibility of random matrices is developed in two stages. Initially, a "soft" argument, utilizing the central limit theorem, yields a basic result, which applies to both the Fourth Moment Theorem 1.1 and a weaker version of the Subgaussian Theorem 1.2. Later developing it into the Strong Invertibility Theorem 5.1 using the Small Ball Probability Theorem 1.5 instead of the central limit theorem.\\
-The paper details a two-pronged strategy for demonstrating the invertibility of matrices by examining their behavior with different types of vectors: compressible and incompressible.
-For compressible vectors, whose significant components are few, the analysis simplifies by focusing on a submatrix of the original, leveraging known results about the smallest singular value of random matrices.
-In contrast, the invertibility for incompressible vectors is tackled through a geometric perspective, analyzing the distance of the n-th row from the span of the others and connecting the problem to the Littlewood-Offord problem via an argument based on the distribution of this distance.
-This dual approach allows for a comprehensive understanding of matrix invertibility across different vector types.
+where \(C > 0\) and \(c \in (0, 1)\) depend (polynomially) only on \(B\) and \(K\).\newline\newline
+Their general approach to invertibility of random matrices is developed in two stages. Initially, a "soft" argument, utilizing the central limit theorem, yields a basic result, which applies to both Theorem 1.1 and a weaker version of Theorem 1.2. Later developing it into the Strong Invertibility Theorem 5.1 by using Theorem 1.5 instead of the central limit theorem.\newline\newline
+The paper outlines a dual strategy to analyze matrix invertibility using compressible and incompressible vectors.
+The analysis for compressible vectors, with few significant components, simplifies by focusing on a submatrix and using known results on the smallest singular value of random matrices.
+For incompressible vectors, invertibility is analyzed geometrically by examining the distance of the n-th row from others, linking it to the Littlewood-Offord problem through distance distribution.
+This dual approach offers a detailed insight into matrix invertibility for various vector types.
